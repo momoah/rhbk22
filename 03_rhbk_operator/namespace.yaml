@@ -1,0 +1,6 @@
+apiVersion: project.openshift.io/v1
+description: "Red Hat Build of Keycloak"
+displayName: RHBK
+kind: ProjectRequest
+metadata:
+    name: rhbk
