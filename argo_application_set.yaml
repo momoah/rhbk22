@@ -19,6 +19,8 @@ spec:
       prune: true
       syncOptions:
         - applyOutOfSyncOnly: true
+        - validate: false
+        - CreateNamespace: true
 #    syncWave:
 #      phaseOrder:   # Specify the order of sync waves
 #        - phase: 1
