@@ -12,7 +12,7 @@ spec:
         - kustomization.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: rhbk
   project: default
   syncPolicy:
     automated:
