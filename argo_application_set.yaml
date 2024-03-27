@@ -7,6 +7,9 @@ spec:
     repoURL: https://github.com/momoah/rhbk22.git       
     targetRevision: HEAD
     path: manifests
+    kustomize:
+      valueFiles:
+        - kustomization.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: default
