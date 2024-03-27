@@ -1,32 +1,4 @@
 apiVersion: argoproj.io/v1alpha1
-kind: ApplicationSet
-metadata:
-  name: keycloak-rhbk
-spec:
-  generators:
-    - list:
-        elements:
-          - name: 01_crunchy_postgres_operator
-            repoURL: https://github.com/momoah/rhbk22/tree/main/01_crunchy_postgres_operator
-            targetRevision: main
-          - name: 02_rhbk_operator
-            repoURL: https://github.com/momoah/rhbk22/tree/main/02_rhbk_operator
-            targetRevision: main
-          - name: 03_postgres_instance
-            repoURL: https://github.com/momoah/rhbk22/tree/main/03_postgres_instance
-            targetRevision: main
-  template:
-    metadata:
-      name: '{{.name}}'
-    spec:
-      source:
-        repoURL: '{{.repoURL}}'
-        targetRevision: '{{.targetRevision}}'
-      destination:
-        server: 'https://kubernetes.default.svc'
-        namespace: 'default'
-
-apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: keycloak-rhbk
