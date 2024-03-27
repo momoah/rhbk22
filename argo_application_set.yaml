@@ -19,18 +19,18 @@ spec:
       prune: true
       syncOptions:
         - applyOutOfSyncOnly: true
-    syncWave:
-      phaseOrder:   # Specify the order of sync waves
-        - phase: 1
-          synchronization:
-            resources:
-              - 01_crunchy_postgres_operator
-              - 02_rhbk_operator
-        - phase: 2
-          synchronization:
-            resources:
-              - 03_postgres_instance
-#        - phase: 3
+#    syncWave:
+#      phaseOrder:   # Specify the order of sync waves
+#        - phase: 1
+#          synchronization:
+#            resources:
+#              - 01_crunchy_postgres_operator
+#              - 02_rhbk_operator
+#        - phase: 2
+#          synchronization:
+#            resources:
+#              - 03_postgres_instance
+##        - phase: 3
 #          synchronization:
 #            resources:
 #              - my-app5
