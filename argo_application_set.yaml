@@ -25,3 +25,48 @@ spec:
       destination:
         server: 'https://kubernetes.default.svc'
         namespace: 'default'
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: keycloak-rhbk
+spec:
+  source:
+    repoURL: https://github.com/momoah/rhbk22.git       
+    targetRevision: HEAD
+    path: manifests
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      syncOptions:
+        - applyOutOfSyncOnly: true
+    syncWave:
+      phaseOrder:   # Specify the order of sync waves
+        - phase: 1
+          synchronization:
+            resources:
+              - 01_crunchy_postgres_operator
+              - 02_rhbk_operator
+        - phase: 2
+          synchronization:
+            resources:
+              - 03_postgres_instance
+#        - phase: 3
+#          synchronization:
+#            resources:
+#              - my-app5
+#        - phase: 4
+#          synchronization:
+#            resources:
+#              - my-app6
+#        - phase: 5
+#          synchronization:
+#            resources: []   # You can leave empty if no applications need to be synced in this phase
+#        - phase: 6
+#          synchronization:
+#            resources: []   # Similarly, for the 6th phase
+#

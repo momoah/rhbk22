@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: https://github.com/momoah/rhbk22.git # The URL of your Git repository containing the kustomization.yaml file
     targetRevision: HEAD # The Git branch, tag, or commit SHA to deploy
-    path: 04_keycloak_instance # The path within the Git repository where the kustomization.yaml file is located
+    path: manifests/04_keycloak_instance # The path within the Git repository where the kustomization.yaml file is located
   syncPolicy:
     automated:
       prune: true # Optional: Whether to delete resources not specified in the Git repository
