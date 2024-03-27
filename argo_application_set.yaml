@@ -8,7 +8,7 @@ spec:
     targetRevision: HEAD
     path: manifests
     kustomize:
-      valueFiles:
+      paths:
         - kustomization.yaml
   destination:
     server: https://kubernetes.default.svc
