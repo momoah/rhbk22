@@ -9,7 +9,9 @@ spec:
     path: manifests
     kustomize:
       paths:
-        - kustomization.yaml
+        - 01_crunchy_postgres_operator
+        - 02_rhbk_operator
+        - 03_postgres_instance
   destination:
     server: https://kubernetes.default.svc
     namespace: default
