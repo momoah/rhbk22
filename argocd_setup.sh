@@ -1,5 +1,11 @@
 #!/bin/bash
 
+oc adm policy add-cluster-role-to-user cluster-admin admin
+oc adm groups new cluster-admins
+oc adm groups add-users cluster-admins admin
+oc create clusterrolebinding cluster-admin-binding --clusterrole cluster-admin --user admin
+
+
 cat > ./openshift-gitops-operator-namespace.yaml << EOF
 apiVersion: v1
 kind: Namespace
