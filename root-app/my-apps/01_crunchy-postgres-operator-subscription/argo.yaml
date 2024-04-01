@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kustomization-postgres-operator
+  namespace: openshift-gitops
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: openshift-gitops # The namespace where ArgoCD is running
+  project: default # The project in ArgoCD where this application belongs
+  source:
+    repoURL: https://github.com/momoah/rhbk22.git # The URL of your Git repository containing the kustomization.yaml file
+    targetRevision: HEAD # The Git branch, tag, or commit SHA to deploy
+    path: root-app/my-apps/01_crunchy-postgres-operator-subscription # The path within the Git repository where the kustomization.yaml file is located
+  syncPolicy:
+    automated:
+      prune: true # Optional: Whether to delete resources not specified in the Git repository
+      selfHeal: true # Optional: Whether to attempt to reconcile differences automatically
+    syncOptions:
+      - Validate=true # This option tells ArgoCD to validate the Kubernetes resources before applying
