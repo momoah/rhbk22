@@ -14,7 +14,7 @@ metadata:
 EOF
 
 oc apply -f ./openshift-gitops-operator-namespace.yaml
-
+rm -fr ./openshift-gitops-operator-namespace.yaml
 
 cat > ./openshift-gitops-operatorgroup.yaml << EOF
 apiVersion: operators.coreos.com/v1
@@ -31,6 +31,7 @@ EOF
 
 
 oc apply -f ./openshift-gitops-operatorgroup.yaml
+rm -fr ./openshift-gitops-operatorgroup.yaml
 
 cat > ./openshift-gitops-operator-subscription.yaml << EOF
 apiVersion: operators.coreos.com/v1alpha1
@@ -49,6 +50,8 @@ spec:
 EOF
 
 oc apply -f ./openshift-gitops-operator-subscription.yaml
+rm -fr -f ./openshift-gitops-operator-subscription.yaml
+
 
 cat > ./openshift-gitops-instance.yaml << EOF
 apiVersion: argoproj.io/v1beta1
@@ -187,7 +190,7 @@ spec:
 EOF
 
 oc apply -f ./openshift-gitops-instance.yaml
-
+rm -fr ./openshift-gitops-instance.yaml
 
 cat > ./openshift-gitops-application-controller-cluster-admin.yaml << EOF
 
@@ -207,6 +210,6 @@ roleRef:
 EOF
 
 oc apply -f ./openshift-gitops-application-controller-cluster-admin.yaml 
-
+rm -fr ./openshift-gitops-application-controller-cluster-admin.yaml
 
 
