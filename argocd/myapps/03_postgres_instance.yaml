@@ -6,7 +6,7 @@ metadata:
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: openshift-gitops # The namespace where ArgoCD is running
+    namespace: rhbk # The namespace where ArgoCD is running
   project: default # The project in ArgoCD where this application belongs
   source:
     repoURL: https://github.com/momoah/rhbk22.git # The URL of your Git repository containing the kustomization.yaml file
