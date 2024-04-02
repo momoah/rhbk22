@@ -7,7 +7,7 @@ spec:
     namespace: default
     server: 'https://kubernetes.default.svc'
   source:
-    path: myapps
+    path: argocd/apps
     repoURL: 'https://github.com/momoah/rhbk22.git'
     targetRevision: HEAD
   project: default
