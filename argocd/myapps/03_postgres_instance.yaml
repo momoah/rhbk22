@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: kustomization-postgres-instance
+  name: rhbk-child-postgres-instance
   namespace: openshift-gitops
 spec:
   destination:
