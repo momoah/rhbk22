@@ -4,4 +4,7 @@ apiVersion: v1
 #displayName: RHBK
 kind: Namespace
 metadata:
-    name: rhbk
+  name: rhbk
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+

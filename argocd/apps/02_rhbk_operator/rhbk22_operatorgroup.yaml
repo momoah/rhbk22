@@ -3,6 +3,9 @@ kind: OperatorGroup
 metadata:
   namespace: rhbk
   name: rhbk
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
+
 spec:
   targetNamespaces:
   - rhbk
