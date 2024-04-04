@@ -6,3 +6,5 @@ Inspired by https://github.com/AdvancedDevSecOpsWorkshop/workshop/tree/main/boot
 A good doco on Sync Waves and Resource Hooks:
 https://redhat-scholars.github.io/argocd-tutorial/argocd-tutorial/04-syncwaves-hooks.html
 
+https://developers.redhat.com/articles/2023/04/10/how-deploy-single-sign-code-using-gitops
+
