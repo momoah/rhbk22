@@ -5,4 +5,3 @@ resources:
   - 01_argocd_operatorgroup.yaml  
   - 02_argocd_subscription.yaml  
   - 03_argocd_rbac.yaml  
-  - 04_openshift-gitops-instance.yaml
