@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: rhbk-child-postgres-instance
+  name: rhbk-child-keycloak-instance
   namespace: openshift-gitops
 spec:
   destination:
