@@ -1,0 +1,26 @@
+apiVersion: k8s.keycloak.org/v2alpha1
+kind: Keycloak
+metadata:
+  name: keycloak-instance
+spec:
+  instances: 1
+  db:
+    vendor: postgres
+    host: postgresdb-primary.rhbk.svc
+    usernameSecret:
+      name: postgresdb-pguser-keycloak
+      key: user
+    passwordSecret:
+      name: postgresdb-pguser-keycloak
+      key: password
+  http:
+    tlsSecret: keycloak-tls-secret
+  hostname:
+    # We don't mention the hostname or the admin hostname here, we manage it with OpenShift routes, and HAProxy restriction to admin url
+    strict: false
+  truststores: # https://github.com/keycloak/keycloak/blob/main/docs/documentation/release_notes/topics/24_0_0.adoc#keycloak-cr-truststores
+    mystore:
+      secret:
+        name: keycloak-truststore-secret
+
+

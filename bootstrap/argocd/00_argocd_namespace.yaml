@@ -16,3 +16,12 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "0"
 spec: {}
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: rhbk
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
+spec: {}
+
