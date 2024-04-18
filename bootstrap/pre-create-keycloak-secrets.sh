@@ -7,8 +7,8 @@ subjectAltName = @alt_names
  
 [ alt_names ]
 DNS.1 = keycloak.local.momolab.io
-DNS.2 = keycloak-rhbk.apps.sno1.local.momolab.io
-DNS.3 = keycloak-rhbk.apps.sno2.local.momolab.io
+DNS.2 = keycloak-admin-route-rhbk.apps.sno1.local.momolab.io
+DNS.3 = keycloak-admin-route-rhbk.apps.sno2.local.momolab.io
 EOF
  
 openssl req -x509 \
