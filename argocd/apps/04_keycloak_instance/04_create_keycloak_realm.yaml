@@ -3,7 +3,7 @@ kind: KeycloakRealmImport
 metadata:
   name: keycloakrealm
 spec:
-  keycloakCRName: keycloak # This is the one we created
+  keycloakCRName: keycloak-instance # This is the one we created
   realm:
     id: momolab
     realm: momolab
