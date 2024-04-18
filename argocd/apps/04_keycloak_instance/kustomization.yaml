@@ -12,5 +12,5 @@ patches:
       name: keycloak-admin-route
     patch: |-
       - op: replace
-        path: /metadata/name
+        path: /spec/host
         value: keycloak-rhbk.apps.sno1.local.momolab.io
