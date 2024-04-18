@@ -1,0 +1,31 @@
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: keycloak-hostname-route
+spec:
+  host: keycloak.local.momolab.io
+  port:
+    targetPort: https
+  tls:
+    termination: passthrough
+    insecureEdgeTerminationPolicy: Redirect
+  to:
+    kind: Service
+    name: keycloak-service
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: keycloak-admin-route
+spec:
+  host: keycloak-rhbk.apps.mysno.local.momolab.io # This will get updated later.
+  port:
+    targetPort: https
+  tls:
+    termination: passthrough 
+    insecureEdgeTerminationPolicy: Redirect
+  to:
+    kind: Service
+    name: keycloak-service
+
