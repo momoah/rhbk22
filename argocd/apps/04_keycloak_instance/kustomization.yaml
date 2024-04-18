@@ -2,8 +2,9 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - 01_create_keycloak_instance.yaml
-  - 02_create_keycloak_route.yaml   
-  - 03_create_keycloak_realm.yaml
+  - 02_create_keycloak_ocp_route.yaml
+  - 03_create_keycloak_lb_route.yaml
+  - 04_create_keycloak_realm.yaml
 
 patches:
   - target:
