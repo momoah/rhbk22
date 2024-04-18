@@ -12,5 +12,5 @@ spec:
     insecureEdgeTerminationPolicy: Redirect
   to:
     kind: Service
-    name: keycloak-service
+    name: keycloak-instance-service
 
