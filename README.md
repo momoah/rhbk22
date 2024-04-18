@@ -11,9 +11,12 @@ sh bootstrap/pre-create-keycloak-secrets.sh
 ```
 oc apply -k bootstrap/argocd/
 ```
+
 This first installs crunchy postgres operator (installed in openshift-operators), then rhbk22 operator (installed in rhbk namespace)
-Once you have an ArgoCD instance, login to the ArgoCD instance, and add a new application. The content of this application is from
-argocd/mainapp.yaml
+Once you have an ArgoCD instance, login to the ArgoCD instance, and add a new application. 
+
+The content of this application is from
+`argocd/mainapp.yaml`
 
 
 # References
