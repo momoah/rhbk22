@@ -45,6 +45,7 @@ oc new-project rhbk
 
 oc create secret tls keycloak-tls-secret -n rhbk --cert /tmp/certificate.pem --key /tmp/key.pem 
 
+rm -f /tmp/truststore.jks
 keytool -import -alias root-ca -keystore /tmp/truststore.jks -file /tmp/ocp_ca.pem -storepass changeit
 
 oc create secret generic keycloak-truststore-secret -n rhbk --from-file=/tmp/truststore.jks
