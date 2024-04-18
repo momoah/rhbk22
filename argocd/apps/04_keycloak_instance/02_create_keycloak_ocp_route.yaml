@@ -4,7 +4,7 @@ kind: Route
 metadata:
   name: keycloak-admin-route
 spec:
-  host: keycloak-rhbk.apps.mysno.local.momolab.io
+#  host: keycloak-rhbk.apps.mysno.local.momolab.io
   port:
     targetPort: https
   tls:

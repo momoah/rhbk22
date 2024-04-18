@@ -6,11 +6,11 @@ resources:
   - 03_create_keycloak_lb_route.yaml
   - 04_create_keycloak_realm.yaml
 
-patches:
-  - target:
-      kind: Route
-      name: keycloak-admin-route
-    patch: |-
-      - op: replace
-        path: /spec/host
-        value: keycloak-rhbk.apps.sno1.local.momolab.io
+#patches:
+#  - target:
+#      kind: Route
+#      name: keycloak-admin-route
+#    patch: |-
+#      - op: replace
+#        path: /spec/host
+#        value: keycloak-rhbk.apps.sno1.local.momolab.io
