@@ -1,3 +1,5 @@
+# This will fail if the pods in operator-marketplace are in error. Ensure you restart them all before proceeding
+#  for MYPOD in $(oc get pods -n openshift-marketplace | egrep -v 'NAME|Completed|Running' | awk '{print $1}'); do echo $MYPOD; oc delete pod $MYPOD -n openshift-marketplace; done
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
