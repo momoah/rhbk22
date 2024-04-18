@@ -13,4 +13,4 @@ patches:
     patch: |-
       - op: replace
         path: /metadata/name
-        value: keycloak-rhbk.apps.${CLUSTER_NAME}
+        value: keycloak-rhbk.apps.sno1.local.momolab.io
